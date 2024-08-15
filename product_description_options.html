@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base */
+        :root {
+            --primary-color: #7B61FF;
+            --button-background: rgba(0, 0, 0, 0.05);
+
+            --shadow-base: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
+
+            --border-radius-base: 15px;
+            --border-base: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+
+            padding: 15px;
+
+            font-family: "Inter", sans-serif;
+        }
+
+        nav,
+        .right_menu,
+        .left_menu,
+        .menu_elements,
+        .tools_options,
+        .main_part,
+        .end_card,.social_icon,
+        .footer {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        /* Nav bar */
+        .logo .right_menu,
+        .left_menu {
+            width: 200px;
+            justify-content: unset;
+        }
+
+        nav {
+            justify-content: space-between;
+            width: 100%;
+            height: 10%;
+        }
+
+        nav .menu_elements {
+            background-color: var(--button-background);
+            color: #494949;
+            font-size: 1.1em;
+
+            height: 45px;
+            width: 45px;
+
+            margin: 10px;
+
+            border: var(--border-base);
+            border-radius: var(--border-radius-base);
+
+            box-shadow: var(--shadow-base);
+
+            cursor: pointer;
+        }
+
+        nav .menu_elements:hover {
+            background-color: #66577c20;
+
+        }
+
+        .menu_elements.hist {
+            width: 130px;
+            color: black;
+        }
+
+        /* Main part */
+        .main_part {
+            width: 100%;
+            height: 85%;
+        }
+
+        .tools_options {
+            background-color: white;
+            box-shadow: var(--shadow-base);
+
+            border: var(--border-base);
+            border-radius: var(--border-radius-base);
+
+            width: 350px;
+            height: 60px;
+
+            justify-content: space-between;
+
+            padding: 5px 20px;
+            margin: 10px;
+
+            font-size: 1.3em;
+
+            cursor: pointer;
+        }
+
+        .tools_options svg {
+            opacity: 0.5;
+        }
+
+        .tools_options:hover {
+            background-color: var(--button-background)
+        }
+        
+        .title_card{
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .social_icon img{
+            margin: 3px;
+        }
+        .main_part{
+            align-items: unset;
+        }
+
+        /* FOOTER */
+        footer {
+            height: 5%;
+        }
+
+        .copyright {
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.334);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left_menu">
+            <div class="menu_elements">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-house">
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                    <path
+                        d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+
+        <div class="right_menu">
+
+            <div class="menu_elements hist">
+                <p>Historique</p>
+            </div>
+
+            <div class="menu_elements">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-settings">
+                    <path
+                        d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main_part">
+        <div class="main_screen">
+            <div class="title_card">
+                <h1 class="logo_cat" style="font-size: 2em;">📝</h1>
+                <h1 class="desc_textlogo_cat">Description produits :</h1>
+            </div>
+            
+            <a href="#" style="text-decoration: none; color: black;">
+                <div class="tools_options">
+                    <p> Pour reseau : </p>
+                    <div class="end_card">
+                        <div class="social_icon"> <img src="facebook_icon.svg" alt=""> <img src="instagram_icon.svg" alt=""></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-chevron-right">
+                        <path d="m9 18 6-6-6-6" />
+                        </svg>
+                    </div>
+                </div>
+            </a>
+            <a href="#" style="text-decoration: none; color: black;">
+                <div class="tools_options">
+                    <p>Pour site web</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-chevron-right">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="copyright">
+            © 2024 <strong>TeamLPM</strong>. Tous droits réservés.
+        </div>
+    </footer>
+</body>
+
+</html>

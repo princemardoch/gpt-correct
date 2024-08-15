@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+         @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+            }
+
+            body {
+            animation: fadeIn 1s ease-in-out forwards;
+            }
+
+            html {
+            background-color: white;
+            }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base */
+        :root {
+            --primary-color: #684DFF;
+            --input-color: #F2F2F2;
+            --button-background: rgba(0, 0, 0, 0.05);
+
+            --shadow-base: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
+
+            --border-radius-base: 12px;
+            --border-base: 1px solid rgba(0, 0, 0, 0.1);
+
+            --font-size-base: 1.1em;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            height: 100vh;
+            width: 100%;
+
+            padding: 15px;
+
+            font-family: "Inter", sans-serif;
+            transition: ease 0.1s;
+        }
+
+        nav,
+        .right_menu,
+        .left_menu,
+        .menu_elements,
+        .tools_options,
+        .main_part,
+        .icon_title,
+        .end_card,
+        .social_icon,
+        .upload_div,
+        .input_desc_div,
+        .divider_div,
+        .divider_card,
+        .main_screen,
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+        /* Nav bar */
+        .logo .right_menu,
+        .left_menu {
+            width: 200px;
+            justify-content: unset;
+        }
+
+        nav {
+            justify-content: space-between;
+            width: 100%;
+            height: 10%;
+        }
+
+        nav .menu_elements {
+            background-color: var(--button-background);
+            color: #494949;
+            font-size: var(--font-size-base);
+
+            height: 45px;
+            width: 45px;
+
+            margin: 10px;
+
+            border: var(--border-base);
+            border-radius: var(--border-radius-base);
+
+            box-shadow: var(--shadow-base);
+
+            cursor: pointer;
+        }
+
+        nav .menu_elements:hover {
+            background-color: #66577c20;
+
+        }
+
+        .menu_elements.hist {
+            width: 130px;
+            color: black;
+        }
+
+        /* Main part */
+        .main_part {
+            width: 100%;
+            height: 85%;
+        }
+
+        .main_screen {
+            flex-direction: column;
+        }
+
+        .title_card {
+            margin-top: -50px;
+            margin-bottom: 50px;
+        }
+
+        .logo_cat {
+            margin-right: 10px;
+        }
+
+        .social_icon img {
+            margin: 3px;
+        }
+
+
+        .icon_title {
+            display: flex;
+        }
+
+        .input_desc_product {
+            width: 100%;
+            height: 100%;
+
+            border: none;
+            outline: none;
+
+            padding: 10px;
+
+            background-color: var(--input-color);
+
+            font-size: var(--font-size-base);
+        }
+
+        .input_desc_product::placeholder {
+            opacity: 0.5;
+        }
+
+        .input_desc_div {
+            width: 100%;
+            height: 55px;
+
+            background-color: var(--input-color);
+
+            border: var(--border-base);
+            border-radius: var(--border-radius-base);
+
+            padding: 5px;
+        }
+
+        .input_desc_div button {
+            height: 100%;
+            width: 140px;
+
+            font-size: var(--font-size-base);
+
+            background-color: white;
+
+            border-radius: var(--border-radius-base);
+            border: var(--border-base);
+            box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+
+            cursor: pointer;
+        }
+
+        .input_desc_div button:hover {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid rgb(72, 0, 255);
+        }
+
+        .upload_div {
+            width: 410px;
+            border: 1px solid #684dff2e;
+            border-radius: var(--border-radius-base);
+            padding: 40px;
+            background-color: #fbfaffde;
+            cursor: pointer;
+            flex-direction: column;
+        }
+
+
+
+        .upload_icon svg {
+            color: rgba(0, 0, 0, 0.698);
+            width: 35px;
+            margin: 10px;
+        }
+
+        .upload_div:hover {
+            background-color: #f6f4fd;
+        }
+
+        .action_text {
+            font-size: var(--font-size-base);
+            font-weight: 600;
+        }
+
+        .indicate_text {
+            font-size: 12px;
+            opacity: 0.5;
+            margin: 5px;
+        }
+
+        .divider_div {
+            width: 100%;
+            margin: 20px;
+        }
+
+        .divider_card {
+            display: flex;
+            width: 50%;
+        }
+
+        .divider_line {
+            opacity: 0.5;
+            margin: 10px;
+            height: 1px;
+            width: 30%;
+            background-color: black;
+        }
+
+        /* FOOTER */
+        footer {
+            height: 5%;
+        }
+
+        .copyright {
+            font-size: 10px;
+            color: rgba(0, 0, 0, 0.334);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="left_menu">
+            <div class="menu_elements">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-house">
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                    <path
+                        d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                </svg>
+            </div>
+        </div>
+
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+
+        <div class="right_menu">
+
+            <div class="menu_elements hist">
+                <p>Historique</p>
+            </div>
+
+            <div class="menu_elements">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-settings">
+                    <path
+                        d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main_part">
+        <div class="main_screen">
+            <div class="title_card">
+                <div class="icon_title">
+                    <h1 class="logo_cat" style="font-size: 2em;"> 📝 </h1>
+                    <div class="social_icon">
+                        <img src="facebook_icon.svg" alt="">
+                        <img src="instagram_icon.svg" alt="">
+                    </div>
+                </div>
+                <h1 class="desc_text_logo_cat">Description pour reseaux :</h1>
+            </div>
+            <form action="">
+                <div class="input_desc_div">
+                    <input type="text" placeholder="Ecrivez quelque mots..." class="input_desc_product">
+                    <button type="submit"> Générer </button>
+                </div>
+            </form>
+            <div class="divider_div">
+                <div class="divider_card">
+                    <div class="divider_line"> </div>
+                    <p>OU</p>
+                    <div class="divider_line"> </div>
+                </div>
+            </div>
+            <div class="upload_div">
+                <div class="upload_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-image-up">
+                        <path
+                            d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
+                        <path d="m14 19.5 3-3 3 3" />
+                        <path d="M17 22v-5.5" />
+                        <circle cx="9" cy="9" r="2" />
+                    </svg>
+                    </svg>
+                </div>
+                <p class="action_text">Importer une image</p>
+                <p class="indicate_text">En JPEG, PNG ou HEIC</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="copyright">
+            © 2024 <strong>TeamLPM</strong>. Tous droits réservés.
+        </div>
+    </footer>
+</body>
+
+</html>
