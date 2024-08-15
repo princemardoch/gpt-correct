@@ -3,19 +3,19 @@
 
 <head>
     <style>
-         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-            }
+        @keyframes fadeIn {
+           0% { opacity: 0; }
+           100% { opacity: 1s; }
+           }
 
-            body {
-            animation: fadeIn 0.5s ease-in-out forwards;
-            }
+           body {
+           animation: fadeIn 0.5s ease-in-out forwards;
+           }
 
-            html {
-            background-color: white;
-            }
-    </style>
+           html {
+           background-color: white;
+           }
+   </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceuil</title>
@@ -27,16 +27,15 @@
     <style>
         /* Base */
         :root {
-            --primary-color: #684DFF;
-            --input-color: #F2F2F2;
+            --primary-color: #7B61FF;
             --button-background: rgba(0, 0, 0, 0.05);
 
             --shadow-base: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
 
-            --border-radius-base: 12px;
+            --border-radius-base: 15px;
             --border-base: 1px solid rgba(0, 0, 0, 0.1);
 
-            --font-size-base: 1.1em;
+            --font-size-base : 1.2em;
         }
 
         * {
@@ -44,7 +43,6 @@
             margin: 0;
             padding: 0;
         }
-
 
         body {
             height: 100vh;
@@ -61,24 +59,17 @@
         .menu_elements,
         .tools_options,
         .main_part,
-        .icon_title,
-        .end_card,
-        .social_icon,
-        .upload_div,
-        .input_desc_div,
-        .divider_div,
-        .divider_card,
-        .main_screen,
+        .actions_btns_div,.actions_btns_div div,
         .footer {
             display: flex;
             align-items: center;
+            align-content: center;
             justify-content: center;
 
             text-align: center;
         }
         nav .menu_elements,
-        .upload_div,
-        .input_desc_div button{
+        .tools_options{
             transition: ease 0.2s;
         }
 
@@ -111,11 +102,7 @@
             box-shadow: var(--shadow-base);
 
             cursor: pointer;
-
-            
         }
-
-        
 
         nav .menu_elements:hover {
             background-color: #66577c20;
@@ -131,132 +118,115 @@
         .main_part {
             width: 100%;
             height: 85%;
+            padding-bottom: 20px;
         }
 
-        .main_screen {
-            flex-direction: column;
+        .main_screen{
+            height: 100%;
+            width: 400px;
         }
 
-        .title_card {
-            margin-top: -50px;
-            margin-bottom: 20px;
-        }
-
-        .logo_cat {
-            margin-right: 10px;
-        }
-
-        .social_icon img {
-            margin: 3px;
-        }
-
-
-        .icon_title {
-            display: flex;
-        }
-
-        .input_desc_product {
+        .interior_main_screen{
             width: 100%;
             height: 100%;
+            
+            margin:10px;
+            
+            border-top: 1px solid rgba(0, 0, 0, 0.074);
 
-            border: none;
-            outline: none;
-
-            padding: 10px;
-
-            background-color: var(--input-color);
-
-            font-size: var(--font-size-base);
+            align-content: start;
+            
+            text-align: start;
         }
 
-        .input_desc_product::placeholder {
+
+        
+        /* Div product description */
+        .img_product{
+            width: 200px;
+            height: 200px;
+            
+            background-color: rgba(0, 0, 0, 0.084);
+
+            border-radius: var(--border-radius-base);
+            margin-top: 20px;
+        }
+        .img_product img{
+            margin: 2px;
+        }
+        .description_div{
+            margin-top: 30px;
+            width: 100%;
+        }
+        .desc_text{
+            font-size: var(--font-size-base);
+            font-weight: 700;
+        }
+        .descriptions_list p{
+            font-size: var(--font-size-base);
+            margin-top: 10px;
+            font-weight: 400;
+        }
+        .description_card{
+            margin: 20px 0px;
+        }
+        .description_card:hover .actions_btns_div{
+            opacity: 1;
+        }
+        .description_text{
+            cursor: pointer;
+        }
+
+        
+        .actions_btns_div{
+            width: 66px;
+            display: flex;
+            margin-top: 10px;
+
+            border: 1px solid rgba(0, 0, 0, 0.056);
+            border-radius: 10px;
+            opacity: 0;
+        }
+        .actions_btns_div div{
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+
+            margin: 2px 0px;
+            
+            border-radius: 8px;
+
+            transition: ease 0.1s;
+        }
+        .actions_btns_div div:hover{
+            background-color: rgba(0, 0, 0, 0.045);
+        }
+        .actions_btns_div svg{
+            width: 15px;
             opacity: 0.5;
         }
 
-        .input_desc_div {
-            width: 100%;
-            height: 55px;
+        .more_long_btn{
+            width: 150px;
+            height: 50px;
 
-            background-color: var(--input-color);
+            background-color: black;
+            color: white;
+            
+            box-shadow: var(--shadow-base);
 
             border: var(--border-base);
             border-radius: var(--border-radius-base);
-
-            padding: 5px;
-        }
-
-        .input_desc_div button {
-            height: 100%;
-            width: 140px;
-
+            
             font-size: var(--font-size-base);
 
-            background-color: white;
-
-            border-radius: var(--border-radius-base);
-            border: var(--border-base);
-            box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
-
             cursor: pointer;
         }
-
-        .input_desc_div button:hover {
-            background-color: var(--primary-color);
+        .more_long_btn:hover{
+            background-color: rgba(0, 0, 0, 0.819);
             color: white;
-            border: 1px solid rgb(72, 0, 255);
-        }
-
-        .upload_div {
-            width: 410px;
-            border: 1px solid #684dff2e;
-            border-radius: var(--border-radius-base);
-            padding: 40px;
-            background-color: #fbfaffde;
-            cursor: pointer;
-            flex-direction: column;
         }
         
-
-
-
-        .upload_icon svg {
-            color: rgba(0, 0, 0, 0.698);
-            width: 35px;
-            margin: 10px;
-        }
-
-        .upload_div:hover {
-            background-color: #f6f4fd;
-        }
-
-        .action_text {
-            font-size: var(--font-size-base);
-            font-weight: 600;
-        }
-
-        .indicate_text {
-            font-size: 12px;
-            opacity: 0.5;
-            margin: 5px;
-        }
-
-        .divider_div {
-            width: 100%;
-            margin: 20px;
-        }
-
-        .divider_card {
-            display: flex;
-            width: 50%;
-        }
-
-        .divider_line {
-            opacity: 0.5;
-            margin: 10px;
-            height: 1px;
-            width: 30%;
-            background-color: black;
-        }
 
         /* FOOTER */
         footer {
@@ -308,45 +278,24 @@
 
     <section class="main_part">
         <div class="main_screen">
-            <div class="title_card">
-                <div class="icon_title">
-                    <h1 class="logo_cat" style="font-size: 2em;"> 📝 </h1>
-                    <div class="social_icon">
-                        <img src="facebook_icon.svg" alt="">
-                        <img src="instagram_icon.svg" alt="">
+            <div class="interior_main_screen">
+                <div class="img_product">
+                    <img src="" alt="">
+                </div>
+                <div class="description_div">
+                    <p class="desc_text"> Description courte : </p>
+                    <div class="descriptions_list">
+                        <div class="description_card">
+                            <p class="description_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin, felis ac volutpat fringilla,</p>
+                            <div class="actions_btns_div">
+                                <div> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> </div>
+                                <div> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> </div>
+                            </div>
+                        </div>
                     </div>
+                    <button class="more_long_btn"> Plus long </button>
                 </div>
-                <h1 class="desc_text_logo_cat">Description pour reseaux :</h1>
-            </div>
-            <form action="">
-                <div class="input_desc_div">
-                    <input type="text" placeholder="Ecrivez quelque mots..." class="input_desc_product">
-                    <button type="submit"> Générer </button>
-                </div>
-            </form>
-            <div class="divider_div">
-                <div class="divider_card">
-                    <div class="divider_line"> </div>
-                    <p>OU</p>
-                    <div class="divider_line"> </div>
-                </div>
-            </div>
-            <div class="upload_div">
-                <div class="upload_icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-image-up">
-                        <path
-                            d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
-                        <path d="m14 19.5 3-3 3 3" />
-                        <path d="M17 22v-5.5" />
-                        <circle cx="9" cy="9" r="2" />
-                    </svg>
-                    </svg>
-                </div>
-                <p class="action_text">Importer une image</p>
-                <p class="indicate_text">En JPEG, PNG ou HEIC</p>
-            </div>
+            </div> 
         </div>
 
     </section>

@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+    <style>
+        @keyframes fadeIn {
+           0% { opacity: 0; }
+           100% { opacity: 1; }
+           }
+
+           body {
+           animation: fadeIn 0.5s ease-in-out forwards;
+           }
+
+           html {
+           background-color: white;
+           }
+   </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceuil</title>
@@ -52,6 +66,10 @@
 
             text-align: center;
         }
+        nav .menu_elements,
+        .tools_options{
+            transition: ease 0.2s;
+        }
 
         /* Nav bar */
         .logo .right_menu,
@@ -98,6 +116,7 @@
         .main_part {
             width: 100%;
             height: 85%;
+            padding-bottom: 100px;
         }
 
         .tools_options {
@@ -129,16 +148,13 @@
         }
         
         .title_card{
-            margin-top: 50px;
             margin-bottom: 20px;
         }
 
         .social_icon img{
             margin: 3px;
         }
-        .main_part{
-            align-items: unset;
-        }
+
 
         /* FOOTER */
         footer {
