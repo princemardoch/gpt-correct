@@ -1,6 +1,8 @@
 # gpt-correct
 AI model that helps correct and generate simple product descriptions.
+
 Just front part
+
 <img width="1440" alt="Capture d’écran 2024-08-15 à 00 24 09" src="https://github.com/user-attachments/assets/da9c7bd1-d435-4c6b-a614-a344709230e3">
 
 ## VISION :
